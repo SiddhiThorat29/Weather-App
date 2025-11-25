@@ -1,0 +1,12 @@
+backend/target/
+backend/*.jar
+*.jar
+*.war
+.vscode/
+.idea/
+.DS_Store
+target/
+*.log
+backend/src/main/resources/application.properties
+*.sql
+__pycache__/
