@@ -1,0 +1,88 @@
+:root{
+  --bg1: #f2f6ff;
+  --bg2: #eef2ff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #fbbf24;
+  --shadow: 0 8px 30px rgba(15,23,42,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:#0f172a;
+  padding:28px 18px;
+}
+
+.topbar{ display:flex; justify-content:center; margin-bottom:18px; }
+.app-name{ margin:0; font-size:20px; font-weight:800; color:#041124; }
+
+.container{
+  max-width:980px; margin:0 auto; display:grid;
+  grid-template-columns: 1fr; gap:20px;
+}
+
+.card-glass{
+  background: rgba(255,255,255,0.9);
+  border-radius:16px; padding:18px;
+  box-shadow:var(--shadow);
+  display:flex; flex-direction:column; gap:12px;
+}
+
+.search-left{ display:flex; gap:12px; align-items:center; }
+.emoji{ font-size:34px; }
+.title .big{ font-size:14px; font-weight:800; color:#041124; }
+
+.search-form{ display:flex; gap:12px; }
+.input{
+  flex:1; border:1px solid rgba(4,17,36,0.08);
+  padding:12px 14px; border-radius:12px;
+  font-weight:700; background:transparent;
+}
+.btn{
+  background:#041124; color:white;
+  padding:12px 18px; border-radius:12px;
+  font-weight:800; cursor:pointer;
+}
+
+.error{ color:#b91c1c; font-weight:800; margin-top:6px; }
+
+.result-section{
+  display:flex; gap:20px; justify-content:center;
+  min-height:260px;
+}
+
+.result-card{
+  width:100%; max-width:760px;
+  background:white; border-radius:18px;
+  padding:20px; display:flex; gap:18px;
+  box-shadow:var(--shadow);
+}
+.result-card.hidden{ display:none; }
+
+.left-pane{
+  min-width:180px; display:flex; flex-direction:column; align-items:center;
+  padding-right:8px; border-right:1px solid rgba(4,17,36,0.04);
+}
+
+.icon-wrap img{ width:90px; height:90px; }
+
+.temp{ font-size:34px; font-weight:900; }
+.feels{ color:var(--muted); }
+
+.meta-row{ display:flex; gap:12px; flex-wrap:wrap; color:var(--muted); }
+.stats{ display:flex; gap:12px; flex-wrap:wrap; }
+
+.stat{
+  background:white;
+  padding:10px 12px;
+  border-radius:10px;
+  font-weight:800;
+}
+
+@media (max-width:720px){
+  .result-card{ flex-direction:column; padding:14px; }
+  .temp{ font-size:28px; }
+  .btn{ width:100%; }
+}

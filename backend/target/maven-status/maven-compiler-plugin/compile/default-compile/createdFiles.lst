@@ -1,0 +1,8 @@
+com/example/weather/model/SearchLog.class
+com/example/weather/config/CaffeineCacheConfig.class
+com/example/weather/model/NormalizedWeather.class
+com/example/weather/service/WeatherService.class
+com/example/weather/controller/WeatherController.class
+com/example/weather/config/CorsConfig.class
+com/example/weather/repository/SearchLogRepository.class
+com/example/weather/WeatherApplication.class

@@ -1,0 +1,27 @@
+Quick start (local)
+-------------------
+1. Install MySQL and MySQL Workbench. Create a database:
+   - Run db/schema.sql in Workbench (it creates database `weather_app` and table `search_logs`).
+
+2. Backend:
+   - Install JDK 17+ and Maven.
+   - Edit backend/src/main/resources/application.properties:
+     - Set openweather.key (or set env var OPENWEATHER_KEY)
+     - Set spring.datasource.url, username, password to match your MySQL.
+   - Build & run:
+     cd backend
+     mvn clean package
+     mvn spring-boot:run
+   - Backend listens on http://localhost:8080
+
+3. Frontend:
+   - Open frontend/index.html in a browser.
+   - If backend runs on a different host/port, edit frontend/app.js to change BASE_URL.
+
+4. Test:
+   - From browser: open index.html and search a city (e.g., London)
+   - Or curl: curl "http://localhost:8080/api/weather?city=London"
+
+Notes:
+- The app caches vendor responses (Caffeine) and logs searches in MySQL table search_logs.
+- Do NOT commit your API key to a public repo.
